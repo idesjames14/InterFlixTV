@@ -12,7 +12,7 @@ inputBox.onkeyup = (e)=>{
     let emptyArray = [];
     if(userData){
         icon.onclick = ()=>{
-            webLink = `./search/${userData}`;
+            webLink = `${userData}`;
             linkTag.setAttribute("href", webLink);
             linkTag.click();
         }
