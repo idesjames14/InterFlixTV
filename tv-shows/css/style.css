@@ -458,7 +458,7 @@ footer .logo{
         font-size: 1.3rem;
     }
     .post-container{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
     footer{
         padding: 10px 20px;
