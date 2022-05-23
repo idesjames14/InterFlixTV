@@ -1,7 +1,7 @@
 let suggestions = [
     "18 Again (Tagalog Dubbed)",
     "One The Woman (Tagalog Dubbed)",
-    "Now, We Are Breaking Up  (Tagalog Dubbed)",
+    "Now, We Are Breaking Up (Tagalog Dubbed)",
     "Voice Season 1 (Tagalog Dubbed)",
     "Voice Season 2 (Tagalog Dubbed)",
     "Clean with Passion for Now (Tagalog Dubbed)",
