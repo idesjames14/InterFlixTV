@@ -802,11 +802,11 @@ footer .logo{
     margin-right: 10px;
 }
 .download-box a{
-    color: #e70634;
+    color: #000000;
     transition: all ease 0.3s;
 }
 .download-box a:hover{
-    color: #c51e3f;
+    color: #d8d8d8;
     transition: all ease 0.3s;
 }
 /*==making-Movie-page-responsive====================*/
