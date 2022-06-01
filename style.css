@@ -18,7 +18,7 @@ h2 {
     font-family: arial;
     font-size: 24px;
     margin: 0 auto;
-    width: 400px;
+    width: 340px;
     height: 200px;
   }
   
@@ -33,7 +33,7 @@ h2 {
 .select-box {
   position: relative;
   display: flex;
-  width: 400px;
+  width: 340px;
   flex-direction: column;
 }
 
