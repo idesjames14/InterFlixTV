@@ -325,7 +325,7 @@ body{
 }
 .post-container{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 35px;
     margin: 20px 0px;
 }
@@ -445,7 +445,7 @@ footer .logo{
 }
 @media(max-width:1100px){
     .post-container{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 @media(max-width:824px){
@@ -458,7 +458,7 @@ footer .logo{
         font-size: 1.3rem;
     }
     .post-container{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     footer{
         padding: 10px 20px;
