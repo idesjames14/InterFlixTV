@@ -1,43 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Search Movies and TV Shows | InterFlixTV</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-        a:link {
-          color: white;
-          background-color: transparent;
-          text-decoration: none;
-        }
-        
-        a:visited {
-          color: pink;
-          background-color: transparent;
-          text-decoration: none;
-        }
-        
-        a:hover {
-          color: orangered;
-          background-color: transparent;
-          text-decoration: underline;
-        }
-        
-        a:active {
-          color: yellow;
-          background-color: transparent;
-          text-decoration: underline;
-        }
-        div{
-  	      width:100%;
-  	    }
-    </style>
+
+<!--==Title==================================-->
+<title>InterFlixTV</title>
+
+<!--Stylesheet(CSS)==========================-->
+<link rel="stylesheet" href="css/style.css"/>
+
 <!--==Fav-icon===============================-->
 <link rel="shortcut icon" href="images/fav-icon.png"/>
-<link rel="stylesheet" href="css/search.css" />
+
 <!--==Import-poppins-font====================-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,15 +27,15 @@
 
 <!--==Using-Font-Awesome======================-->
 <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+<!--==CSS-Swiper==============================-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.4/swiper-bundle.min.css"/>
+
   </head>
   <body>
-    <!--==Scroll-Progress-bar=========================-->
-    <div id="progress">
-      <span id="progress-value"></span>
-  </div>
 
-  <!--==Navigation===================================-->
-  <nav class="navigation">
+    <!--==Navigation===================================-->
+    <nav class="navigation">
 
       <!--menu-btn--------------->
       <input type="checkbox" class="menu-btn" id="menu-btn">
@@ -81,75 +58,40 @@
           <li><a href="#">Contact</a></li>
       </ul>
 
+      <!--Search-box------------->
+      <form action="./search.html" class="search-box">
+          <a href="./search.html">Search Movies and TV Shows...ㅤ</a>
+          <!--btn-->
+          <button type="submit">
+              <i class="fas fa-search"></i>
+          </button>
+      </form>
+
   </nav>
   <!--nav-end-->
 
-    <div class="container">
-      <h2 style="color:red">Search Movies and TV Shows - InterFlixTV</h2>
-
-      <div class="select-box">
-        <div class="options-container">
-          <div class="option">
-            <input
-              type="radio"
-              class="radio"
-              id="automobiles"
-              name="category"
-            />
-            <label for="automobiles"><a href="tv-shows/Hotel Del Luna (Tagalog Dubbed).html">Hotel Del Luna (Tagalog Dubbed)</a></label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="film" name="category" />
-            <label for="film"><a href="tv-shows/Moon Lovers - Scarlet Heart Ryeo (Tagalog Dubbed).html">Moon Lovers: Scarlet Heart Ryeo (Tagalog Dubbed)</a></label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="science" name="category" />
-            <label for="science"><a href="tv-shows/18 Again (Tagalog Dubbed).html">18 Again (Tagalog Dubbed)</a></label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="art" name="category" />
-            <label for="art"><a href="tv-shows/Business Proposal (Multi-Sub).html">Business Proposal (Multi-Sub)</a></label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="music" name="category" />
-            <label for="music"><a href="tv-shows/Misty (Tagalog Dubbed).html">Misty (Tagalog Dubbed)</a></label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="travel" name="category" />
-            <label for="travel"><a href="tv-shows/One The Woman (Tagalog Dubbed).html">One The Woman (Tagalog Dubbed)</a></label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="sports" name="category" />
-            <label for="sports"><a href="tv-shows/Doom at Your Service (Tagalog Dubbed).html">Doom at Your Service (Tagalog Dubbed)</a></label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="news" name="category" />
-            <label for="news"><a href="tv-shows/Now, We Are Breaking Up (Tagalog Dubbed).html">Now, We Are Breaking Up (Tagalog Dubbed)</a></label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="tutorials" name="category" />
-            <label for="news"><a href="tv-shows/The Oath of Love (Multi-Sub).html">The Oath of Love (Multi-Sub)</a></label>
-          </div>
+    <div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="Type to search..">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
         </div>
-
-        <div class="selected">
-          Click Here to Search...
-        </div>
-
-        <div class="search-box">
-          <input type="text" placeholder="Start Typing..." />
-        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
       </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="js/suggestions.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      var input = document.getElementById("myInput");
+      input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          document.getElementById("myBtn").click();
+        }
+      });
+    </script>
+
   </body>
 </html>
