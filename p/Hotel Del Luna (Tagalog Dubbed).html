@@ -45,6 +45,11 @@
 
 <body>
 
+    <!--==Scroll-Progress-bar=========================-->
+    <div id="progress">
+        <span id="progress-value"></span>
+    </div>
+
     <!--==Navigation===================================-->
     <nav class="navigation">
 
@@ -126,7 +131,7 @@
             <!--play-btn******************************--->
             <div class="play-btn-container">
                 <div class="play-btn">
-                    <a href="#episode-list">
+                    <a href="#episode-list" style="text-decoration: none;">
                         <i class="fas fa-play"></i>
                     </a>
                 </div>
@@ -623,6 +628,8 @@
     </footer>
 
 
+    <!--==JS-Swiper====================================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.4/swiper-bundle.min.js"></script>
     <!--==jQuery=======================================-->
     <script src="js/jQuery.js"></script>
 
@@ -646,6 +653,64 @@
             });
         });
     </script>
+
+    <script>
+        /*==scroll-progress-bar======================*/
+        let scrollPrecentage = () =>{
+            let scrollProgress = document.getElementById("progress");
+            let progressValue = document.getElementById("progress-value");
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollValue = Math.round(pos * 100 / calcHeight);
+            scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollValue}%)`;
+        }
+        window.onscroll = scrollPrecentage;
+        window.onload = scrollPrecentage;
+
+        
+        /*Initialize Swiper*/
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+          navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          },
+        });
+
+        /*--menu-btn-fixed-when-scroll============*/
+        $(window).scroll(function(){
+            if($(document).scrollTop() > 20){
+                $('.navigation').addClass('fix-icon');
+            }
+            else{
+                $('.navigation').removeClass('fix-icon');
+            }
+        });
+    </script>
+
 
 </body>
 
