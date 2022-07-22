@@ -2,22 +2,25 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - 404 Error Page with Search Functionality Using VueJS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page not found</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://interflixtv.onrender.com/error.css">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
-</head>
-<body>
+<!-- partial:index.partial.html -->
+<h1>404</h1>
+<div class="cloak__wrapper">
+  <div class="cloak__container">
+    <div class="cloak"></div>
+  </div>
+</div>
+<div class="info">
+  <h2 style="font-size: 25px">We can't find that page</h2>
+  <p style="font-size: 20px">The page that you're looking for does not exist.</p><a href="http://interflixtv.onrender.com" target="_blank" rel="noreferrer noopener">Home</a>
+</div>
+<!-- partial -->
+  <script  src="https://interflixtv.onrender.com/script.js"></script>
 
-  <div id="app"></div>
-
-  
-
-  <script type="module">
-    import CodePenVueComponent from "./error.js";
-    new Vue(CodePenVueComponent).$mount('#app');
-  </script>
 </body>
 </html>
