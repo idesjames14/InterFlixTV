@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TUE45</title>
+  <!-- Docs styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/Plyr/plyr.css" />
+
+<style>
+  
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+</style>
+<style>
+  * {margin:0}
+  .video {width:100px;height:50px;margin:0px auto;}
+</style>
+
+  </head>
+  <body>
+    <video
+          controls
+          crossorigin
+          data-poster="the-untamed.jpg"
+          id="player"
+          width="100%"
+        >
+          <!-- Video files -->
+          <source
+            src="https://download1347.mediafire.com/qor9qmzlp9egFjDw6jkruOqhcjh3O_QAsjiygnOCHD00e4ZKVKrEboYKBpxs_cHY98Z5wSRwyTY1cIekpw4hwvg2aRMEa1U/fuutjfwp4tmwuye/The+Untamed+-+Episode+45+%28Tagalog+Dubbed%29.mp4"
+            type="video/mp4"
+            size="1080"
+          />
+		  
+        </video>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.7/plyr.min.js"></script>
+    <script>const player = new Plyr('#player');</script>
+  </body>
+</html>
