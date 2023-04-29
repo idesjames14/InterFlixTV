@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BRE3</title>
+    <link href="https://vjs.zencdn.net/7.11.8/video-js.css" rel="stylesheet" />
+    <style>
+      .video-js {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 100%;
+        height: 0;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+        overflow: hidden;
+      }
+      .vjs-big-play-button {
+        font-size: 4rem;
+      }
+      .vjs-big-play-button:before {
+        content: "\e800";
+        font-family: "VideoJS";
+        font-size: 4rem;
+      }
+    </style>
+    <script src="https://vjs.zencdn.net/7.11.8/video.min.js"></script>
+  </head>
+  <body>
+    <video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto"
+      data-setup='{"techOrder": ["html5", "hls"], "sources": [{"src": "https://sv7.gdplayer.to/playlist/MWdTZWRUSUZWUlpHem9KL3hNaEQ3cXRzRG9MR1RuZ2ZLZitHdTFOSFZLSUpXK1luaFNDNDFXOGN4TElEdGV5ZEZTMVp2dHVHVW5LQzM0SkEwTVlLTWpUbWpIaDRZVGc1bzBaOGJWcWZLZUk9/expires/1682870844575/clientType/0/srcIp/79.137.205.116/type/2/mid/5409222953478/id/4158745217542/ms/185.226.53.38/zs/43/srcAg/CHROME/urls/45.136.22.74/oq/0/ct/28/sig/_DewJB4fDpY/ondemand/CIaUoMSEeSgFMAJqCgoICDcQARgBIAJyBgoECDcQAnjcCdfF4GH9z5TI/fn/track.m3u8?data=OWdzdmxQWGFzL0ZOeVdwQzlPVjl5OC81MzM3VnN0cGIyVnd0aGt6aU5IY2wrbVQrY1JkazZUU0dpYWljYXhUTE9JYWRsYy9aczI1NUFIWHVlU1VIampwK2g5aFN3WTJUOFBzd3BuaXIrZ3M9&live=true&token=SmZHUHpBbWF2TjM4dGo3WEtQWngrR0JHUUhQa0NTN3dZZHByeDRXcTBKejNNQmR6MW52TjVaNWxvaGtTVWFTUGJaY2dFMXB4STl3bENMcDJiVmg0eUE9PQ", "type": "application/x-mpegURL"}], "tracks": [{"kind": "subtitles", "label": "English", "src": "https://interflix.onrender.com/episode/br/subtitle/bre3sub.vtt", "srclang": "en", "default": true}]}'>
+    </video>
+    <script>
+      // Load custom font for play button icon
+      videojs.FontLoader.fonts({
+        VideoJS: {
+          urls: ['https://cdn.jsdelivr.net/npm/@fontsource/videojs@5.0.2/files/videojs.woff2'],
+          family: 'VideoJS',
+          weight: 'normal',
+          style: 'normal',
+          attributes: {
+            'font-style': 'normal',
+            'font-weight': 'normal',
+          },
+        },
+      }, {
+        timeout: 10000,
+        async: true,
+      });
+    </script>
+    <script src="https://vjs.zencdn.net/7.11.8/video.min.js"></script>
+  </body>
+</html>
